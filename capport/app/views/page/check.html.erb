@@ -1,0 +1,24 @@
+<h1>Page#check</h1>
+<p>Find me in app/views/page/check.html.erb</p>
+<p>結果を見るには下のいいね!ボタンを押して下さい</p>
+<div class="like-box"><div class="fb-like" data-href="https://www.facebook.com/aoauth" data-width="500" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div></div>
+<div id="fb-root"></div>
+
+<script>
+// facebook
+window.fbAsyncInit = function() {
+  FB.init({
+appId      : '1056058057778572',
+status     : false, // check the login status upon init?
+cookie     : true, // set sessions cookies to allow your server to access the session?
+xfbml      : true  // parse XFBML tags on this page?
+});
+
+// いいねしたときの処理
+FB.Event.subscribe('edge.create',
+    function(response) {
+    location.href = "<%= result_url %>";
+    }
+    );
+};
+</script>
