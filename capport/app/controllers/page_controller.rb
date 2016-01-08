@@ -1,3 +1,4 @@
+require 'pry'
 class PageController < ApplicationController
   before_filter :authenticate_user!
   #def check
@@ -6,12 +7,14 @@ class PageController < ApplicationController
   #def result
   #end
   def result
+   bindings.pry
    if session[:previous_url] != check_path && session[:previous_url] != result_path
    redirect_to check_path
    end
   end
   #likesの処理
   def check
+   bindings.pry
     client = current_user.graph
     events = client.get_connections("me", "events")
     events.each do |event|
