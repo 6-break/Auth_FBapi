@@ -20,8 +20,8 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
   end
 
   def graph
-  access_token = auth['']
-    Koala::Facebook::API.new(self.access_token)
+  
+    Koala::Facebook::API.new(self.token)
   end
 
 end
