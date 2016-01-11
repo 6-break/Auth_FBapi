@@ -15,3 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
+../.DS_Store
+../capPortal/
+../capport_b/
+../newapp/
+../otoshimono/
+../railsgirls/
+.gitignore
