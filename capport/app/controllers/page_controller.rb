@@ -1,11 +1,7 @@
 require 'pry'
 class PageController < ApplicationController
   before_filter :authenticate_user!
-  #def check
-  #end
 
-  #def result
-  #end
   def result
    #bindings.pry
    if session[:previous_url] != check_path && session[:previous_url] != result_path
@@ -22,11 +18,13 @@ class PageController < ApplicationController
       redirect_to result_path
      end
 
+    #いいね数チェックのcase
     #likes = client.get_connections("me", "likes")
     #likes.each do |like|
     # if like["id"] =="1056058057778572"
     #  redirect_to result_path
     #  end
+
     end
    end
 
