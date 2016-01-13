@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
   after_filter :store_location
    
-  #def after_sign_in_path_for
-   
-  #end
+  def after_sign_in_path_for
+   page_result_path
+  end
    
   def store_location
    session[:previous_url] = request.fullpath 
