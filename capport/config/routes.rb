@@ -17,8 +17,8 @@ Rails.application.routes.draw do
     
     }
   #rooting 
-  match "/check", to: "pages#check", via: "get"
-  match "/result", to: "pages#result", via: "get"  
+  match "/check", to: "page#check", via: "get"
+  match "/result", to: "page#result", via: "get"  
 
   #user check
   #match "/result", to: "page#result", via: "get"
