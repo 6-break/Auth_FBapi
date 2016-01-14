@@ -14,8 +14,9 @@ class PageController < ApplicationController
     client = current_user.graph
     events = client.get_connections("me", "events")
     events.each do |event|
-     if event["id"] == "1419229731651584"
-      redirect_to result_path
+     if event["id"] == "142016072834826"
+       #1419229731651584
+      redirect_to page_result_path
      end
 
     #いいね数チェックのcase
