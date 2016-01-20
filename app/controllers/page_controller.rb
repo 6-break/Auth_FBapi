@@ -10,14 +10,21 @@ class PageController < ApplicationController
   end
   #likesの処理
   def check
-   #bindings.pry
     client = current_user.graph
-    events = client.get_connections("me", "events")
-    events.each do |event|
-     if event["id"] == "142016072834826"
+    #friends
+    friends = client.get_connections("me", "friends")
+    friends.each fo |friend|
+    if friend["id"] == "243205069215167"
+     redirect_to page_result_path
+    end
+
+    #events
+    #events = client.get_connections("me", "events")
+    #events.each do |event|
+    # if event["id"] == "142016072834826"
        #1419229731651584
-      redirect_to page_result_path
-     end
+    #  redirect_to page_result_path
+    # end
 
     #いいね数チェックのcase
     #likes = client.get_connections("me", "likes")
