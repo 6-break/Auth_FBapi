@@ -13,7 +13,7 @@ class PageController < ApplicationController
     client = current_user.graph
     #friends
     friends = client.get_connections("me", "friends")
-    friends.each fo |friend|
+    friends.each do |friend|
     if friend["id"] == "243205069215167"
      redirect_to page_result_path
     end
