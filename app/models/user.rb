@@ -17,6 +17,7 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
                     )
   end
   user
+end
 
   def graph
 
