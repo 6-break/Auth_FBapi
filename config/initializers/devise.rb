@@ -266,6 +266,6 @@ Devise.setup do |config|
 
   #API key
   config.omniauth :facebook, "147987535568846", "dc9cff42cef36d38be80dcc7f1292acb",
-   scope: 'basic_info, email, public_profile, user_events'
+   scope: 'basic_info, email, public_profile, user_friends'
 
 end
