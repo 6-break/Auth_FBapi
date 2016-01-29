@@ -3,6 +3,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table(:users) do |t|
 
       ##
+  
       t.integer :uid, null: false, limit: 8
       t.string :provider
       t.string :token
