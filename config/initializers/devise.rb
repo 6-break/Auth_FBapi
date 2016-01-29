@@ -266,6 +266,6 @@ Devise.setup do |config|
 
   #API key add user_friends(not user_events, user_likes)
   config.omniauth :facebook, "147987535568846", "dc9cff42cef36d38be80dcc7f1292acb",
-   scope: 'basic_info, email, public_profile, user_friends'
+   scope: 'basic_info, email, user_friends, public_profile'
 
 end
