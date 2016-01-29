@@ -8,7 +8,7 @@ class PageController < ApplicationController
    redirect_to check_path
    end
   end
-  #likesの処理
+  #lfriendsの処理
   def check
     client = current_user.graph
     #friends
