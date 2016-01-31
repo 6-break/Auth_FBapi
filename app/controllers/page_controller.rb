@@ -13,8 +13,11 @@ class PageController < ApplicationController
     client = current_user.graph
     #friends
     friends = client.get_connections("me", "friends")
+
     friends.each do |friend|
-    if friend["id"] == "243205069215167"
+    #binding.pry
+    #文字列　数字に変換 to_iメソッド
+    if friend["id"].to_i == Rails.application.secrets.admin_fb_id
      redirect_to page_result_path
     end
 
