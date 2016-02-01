@@ -1,4 +1,4 @@
-require 'pry'
+#require 'pry'
 class PageController < ApplicationController
   before_filter :authenticate_user!
 
@@ -8,6 +8,7 @@ class PageController < ApplicationController
    redirect_to check_path
    end
   end
+
   #lfriendsの処理
   def check
     client = current_user.graph
@@ -22,6 +23,7 @@ class PageController < ApplicationController
     　end
 
     end
+
    end
 
 end

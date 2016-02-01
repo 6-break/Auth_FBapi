@@ -28,15 +28,11 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     #ユーザー登録済み　　tokenとe-mailアップデート 
     user.update(token: auth.credentials.token, email: auth.info.email)
   end
-
   user
-end
+ end
 
   def graph
- 
   Koala::Facebook::API.new(self.token)
-
-
   end
 
 end
