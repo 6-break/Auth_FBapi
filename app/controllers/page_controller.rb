@@ -18,9 +18,25 @@ class PageController < ApplicationController
     friends.each do |friend|
     #binding.pry
     #文字列　数字に変換 to_iメソッド
-    　if friend["id"].to_i == Rails.application.secrets.admin_fb_id
-     　　redirect_to page_result_path
-    　end
+     if friend["id"].to_i == Rails.application.secrets.admin_fb_id
+     redirect_to page_result_path
+    end
+
+    #events
+    #events = client.get_connections("me", "events")
+    #events.each do |event|
+    # if event["id"] == "142016072834826"
+       #1419229731651584
+    #  redirect_to page_result_path
+    # end
+
+    #いいね数チェックのcase
+    #likes = client.get_connections("me", "likes")
+    #likes.each do |like|
+    # if like["id"] =="1056058057778572"
+    #  redirect_to result_path
+    #  end
+ 
 
     end
 
