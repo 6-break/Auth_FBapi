@@ -1,5 +1,25 @@
 <h1>　　</h1>
 <p>Authenticate  successfully.</p>
+
+
+ <script src="app/assets/javascripts/ChilliLibrary.js"></script>
+ <script type="../">
+
+ chilliController.host = "192.168.1.1"; // Hard Coding - not a good idea
+ chilliController.port = "3990";
+ chilliController.interval = 60;
+
+ // chilliController.onError = handleErrors;
+ // chilliController.onUpdate = updateUI;
+ //insert user and pass
+ chilliController.logon('ao','ao');
+
+ chilliController.onError = handleErrors;
+
+</script>
+
 <body>
 	<h3>yay! Now you can acceess the Internet.</h3>
+     
+
 </body>
